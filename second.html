@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			box-sizing: border-box;
+		}
+		body
+		{
+			background: lightpink;
+			height: 700px;
+		}
+		h1
+		{
+			display: flex;
+			justify-content: center;
+			background: white;
+			color: black;
+		}
+		.b
+		{
+			display: flex;
+			justify-content: center;
+			line-height: 50px;
+			color: red;
+		}
+		.c
+		{
+			display: flex;
+			line-height: 400px;
+			align-items: stretch;
+		}
+		.footer>a
+		{
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+		}
+		.footer>a:hover
+		{
+			background: blue;
+			color: white;
+		}
+	</style>
+	<script type="text/javascript">
+		function ab()
+		{
+			var name=document.getElementById('name').value;
+			var amount=document.getElementById('amount').value;
+			var month=document.getElementById('x').value;
+			month=+month;
+			amount=+amount;
+			var repay;
+			var int;
+			var emi;
+			
+				int=amount*0.05;
+				repay=amount+int;
+				emi=repay/month;
+				document.getElementById('a1').innerHTML=emi;
+
+				var int1=amount*0.15;
+				var repay1=amount+int1;
+				var emi1=repay1/month;
+				document.getElementById('a2').innerHTML=emi1;
+
+				var int2=amount*0.16;
+				var repay2=amount+int2;
+				var emi2=repay2/month;
+				document.getElementById('a3').innerHTML=emi2;
+
+				var int3=amount*0.08;
+				var repay3=amount+int3;
+				var emi3=repay3/month;
+				document.getElementById('a4').innerHTML=emi3;
+
+				var int4=amount*0.14;
+				var repay4=amount+int4;
+				var emi4=repay4/month;
+				document.getElementById('a5').innerHTML=emi4;
+
+				var int5=amount*0.17;
+				var repay5=amount+int5;
+				var emi5=repay5/month;
+				document.getElementById('a6').innerHTML=emi5;
+
+				var int6=amount*0.12;
+				var repay6=amount+int6;
+				var emi6=repay6/month;
+				document.getElementById('a7').innerHTML=emi6;
+
+				var int7=amount*0.13;
+				var repay7=amount+int7;
+				var emi7=repay7/month;
+				document.getElementById('a8').innerHTML=emi7;
+
+				var int8=amount*0.18;
+				var repay8=amount+int8;
+				var emi8=repay8/month;
+				document.getElementById('a9').innerHTML=emi8;
+		}
+		function abc()
+			{
+				document.getElementById('name').style.background="green";
+				document.getElementById('name').style.color="white";
+			}
+		function abc1()
+		{
+			document.getElementById('amount').style.background="yellow";
+			document.getElementById('amount').style.color="red";
+		}
+		function cba()
+		{
+			document.getElementById('name').style.background="white";
+			document.getElementById('name').style.color="black";
+		}
+		function cba1()
+		{
+			document.getElementById('amount').style.background="white";
+			document.getElementById('amount').style.color="black";
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h1>EMI CALCULATOR</h1>
+	</div>
+	<div class="b">
+			<table>
+				<tr>
+					<td>NAME</td>
+					<td>:</td>
+					<td><input type="text" onfocus="abc()" onblur="cba()" placeholder="Enter Your Name" id="name" name=""></td>
+				</tr>
+				<tr>
+					<td>LOAN AMOUNT</td>
+					<td>:</td>
+					<td><input type="text" onfocus="abc1()" onblur="cba1()" placeholder="Enter Amount" id="amount" name=""></td>
+				</tr>
+				<tr>
+					<td>INSTALMENT</td>
+					<td>:</td>
+					<td> <select id="x">
+						<option value="12">12</option>
+						<option value="24">24</option>
+						<option value="36">36</option>
+					</seclect> </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><input type="submit" onclick="ab()" name="">
+						<input type="reset" value="cancel" name=""></td>
+				</tr>
+			</table>
+	</div>
+	<div class="c"></div>
+	<div><h1>ALL BANK DETAILS</h1></div>
+	<div class="e">
+		<table border="2" cellpadding="10" cellspacing="10" width="100%">
+			<thead>
+				<tr>
+					<th>PLANS</th>
+					<th>AXIS BANK</th>
+					<th>ICICI BANK</th>
+					<th>HDFC BANK</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>PERSONNAL LOAN</td>
+					<td><p id="a1"></p></td>
+					<td><p id="a2"></p></td>
+					<td><p id="a3"></p></td>
+				</tr>
+				<tr>
+					<td>HOUSE LOAN</td>
+					<td><p id="a4"></p></td>
+					<td><p id="a5"></p></td>
+					<td><p id="a6"></p></td>
+				</tr>
+				<tr>
+					<td>BUSSINESS LOAN</td>
+					<td><p id="a7"></p></td>
+					<td><p id="a8"></p></td>
+					<td><p id="a9"></p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="footer">
+		<a href="index.html">HOME</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body
+		{
+			background: pink;
+		}
+		table
+		{
+			margin-top: 200px;
+		}
+		.footer>a
+		{
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+		}
+		.footer>a:hover
+		{
+			background: blue;
+			color: white;
+		}
+	</style>
+	<script type="text/javascript">
+		function ab()
+		{
+			var date=document.getElementById('x').value;
+			var month=document.getElementById('x1').value;
+			var year=document.getElementById('x2').value;
+			date=+date;
+			month=+month;
+			year=+year;
+			let date1=new Date();
+			let date2=date1.getDate();
+			let month1=date1.getMonth()+1;
+			let year1=date1.getFullYear();
+			let a;
+			let b;
+			let c;
+			if(date!=0 && month!=0 && year!=0)
+			{
+				if(date>0 && date<=31)
+				{
+					document.getElementById('y').innerHTML="<img src='tick.png' width='20px'>";
+					if(month>0 && month<=12)
+					{
+						document.getElementById('y1').innerHTML="<img src='tick.png' width='20px'>";
+						if(year>0)
+						{
+							document.getElementById('y2').innerHTML="<img src='tick.png' width='20px'>";
+							a=date1+(31-date);
+							b=month1+(12-month);
+							if(b==12){
+								b=0;
+								c=year1-year;
+								document.getElementById('dob').innerHTML="Your Age Is : "+c+"years"+" "+b+"month";
+							}
+							else if (b>12)
+								{
+									b-=12;
+									c=year1-year;
+									document.getElementById('dob').innerHTML="Your Age Is : "+c+"years"+" "+b+"month";
+								}
+							else{
+								c=year1-year-1;
+								document.getElementById('dob').innerHTML="Your Age Is : "+c+"years"+" "+b+"month";
+							}		
+						}
+						else
+						{
+							document.getElementById('y2').innerHTML="<img src='wrong.png' width='20px'>";
+						}
+					}
+					else
+					{
+						document.getElementById('y1').innerHTML="<img src='wrong.png' width='20px'>";
+					}
+				}
+				else
+				{
+					document.getElementById('y').innerHTML="<img src='wrong.png' width='20px'>";
+				}
+			}
+			else
+			{
+				document.getElementById('y').innerHTML="<img src='wrong.png' width='20px'>";
+				document.getElementById('y1').innerHTML="<img src='wrong.png' width='20px'>";
+				document.getElementById('y2').innerHTML="<img src='wrong.png' width='20px'>";
+			}
+		}
+		function abc()
+			{
+				document.getElementById('x').style.background="blue";
+				document.getElementById('x').style.color="white";
+			}
+		function abc1()
+		{
+			document.getElementById('x1').style.background="red";
+			document.getElementById('x1').style.color="white";
+		}
+		function abc2()
+		{
+			document.getElementById('x2').style.background="yellow";
+			document.getElementById('x2').style.color="red";
+		}
+		function cba()
+		{
+			document.getElementById('x').style.background="white";
+			document.getElementById('x').style.color="black";
+		}
+		function cba1()
+		{
+			document.getElementById('x1').style.background="white";
+			document.getElementById('x1').style.color="black";
+		}
+		function cba2()
+		{
+			document.getElementById('x2').style.background="white";
+			document.getElementById('x2').style.color="black";
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<center>
+			<table>
+				<tr>
+					<td>Enter D.O.B</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Enter Date</td>
+					<td>:</td>
+					<td><input type="text" id="x" name="" onfocus="abc()" onblur="cba()"><span id="y"></span></td>
+				</tr>
+				<tr>
+					<td>Enter Month</td>
+					<td>:</td>
+					<td><input type="text" id="x1" name="" onfocus="abc1()" onblur="cba1()"><span id="y1"></span></td>
+				</tr>
+				<tr>
+					<td>Enter Year</td>
+					<td>:</td>
+					<td><input type="text" id="x2" name="" onfocus="abc2()" onblur="cba2()"><span id="y2"></span></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>
+						<input type="button" value="submit" onclick="ab()" name="">
+						<input type="reset" value="cancel" name="">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><p id="dob"></p></td>
+				</tr>
+			</table>
+		</center>
+    </div>
+    <div>
+
+    </div>
+	<div class="footer">
+		<a href="index.html">Home</a>
+	</div>
+</body>
+</html>

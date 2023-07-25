@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			box-sizing: border-box;
+		}
+		body
+		{
+			background: pink;
+			height: 700px;
+		}
+		.b
+		{
+			display: flex;
+			justify-content: center;
+			align-items: stretch;
+		}
+		h1
+		{
+			display: flex;
+			justify-content: center;
+			background: white;
+			color: black;
+		}
+		.footer>a
+		{
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+		}
+		.footer>a:hover
+		{
+			background: blue;
+			color: white;
+		}
+	</style>
+	<script type="text/javascript">
+		function ab()
+		{
+			var name=document.getElementById('x').value;
+			var amount=document.getElementById('x1').value;
+			var month=document.getElementById('x2').value;
+			amount=+amount;
+			var int=0;
+			var repay;
+			repay=amount+int;
+			document.getElementById('a1').innerHTML=amount;
+			document.getElementById('a2').innerHTML=int;
+			document.getElementById('a3').innerHTML=repay;
+			var int1=repay+(amount*0.05);
+			var repay1=repay+int1;
+			document.getElementById('a4').innerHTML=amount;
+			document.getElementById('a5').innerHTML=int1;
+			document.getElementById('a6').innerHTML=repay1;
+			var int2=int1+(repay1*0.05);
+			var repay2=repay1+int2;
+			document.getElementById('a7').innerHTML=amount;
+			document.getElementById('a8').innerHTML=int2;
+			document.getElementById('a9').innerHTML=repay2;
+			var int3=int2+(repay2*0.05);
+			var repay3=repay2+int3;
+			document.getElementById('a10').innerHTML=amount;
+			document.getElementById('a11').innerHTML=int3;
+			document.getElementById('a12').innerHTML=repay3;
+			var int4=int3+(repay3*0.05);
+			var repay4=repay3+int3;
+			document.getElementById('a13').innerHTML=amount;
+			document.getElementById('a14').innerHTML=int4;
+			document.getElementById('a15').innerHTML=repay4;
+			var int5=int4+(repay4*0.05);
+			var repay5=repay4+int4;
+			document.getElementById('a16').innerHTML=amount;
+			document.getElementById('a17').innerHTML=int5;
+			document.getElementById('a18').innerHTML=repay5;
+			var int6=int5+(repay5*0.05);
+			var repay6=repay5+int5;
+			document.getElementById('a19').innerHTML=amount;
+			document.getElementById('a20').innerHTML=int6;
+			document.getElementById('a21').innerHTML=repay6;
+			var int7=int6+(repay6*0.05);
+			var repay7=repay6+int6;
+			document.getElementById('a22').innerHTML=amount;
+			document.getElementById('a23').innerHTML=int7;
+			document.getElementById('a24').innerHTML=repay7;
+			var int8=int7+(repay7*0.05);
+			var repay8=repay7+int7;
+			document.getElementById('a25').innerHTML=amount;
+			document.getElementById('a26').innerHTML=int8;
+			document.getElementById('a27').innerHTML=repay8;
+			var int9=int8+(repay8*0.05);
+			var repay9=repay8+int8;
+			document.getElementById('a28').innerHTML=amount;
+			document.getElementById('a29').innerHTML=int9;
+			document.getElementById('a30').innerHTML=repay9;
+			var Total=10*amount;
+			var Profit=repay9-Total;
+			var ProfitPer=Profit/100;
+			document.getElementById('y').innerHTML="NET AMOUNT : "+Total;
+			document.getElementById('y1').innerHTML="NET PROFIT : "+Profit;
+			document.getElementById('y2').innerHTML="NET PROFIT PERCENTAGE : "+ProfitPer;
+		}
+		function abc()
+			{
+				document.getElementById('x').style.background="yellow";
+				document.getElementById('x').style.color="red";
+			}
+		function abc1()
+		{
+			document.getElementById('x1').style.background="blue";
+			document.getElementById('x1').style.color="white";
+		}
+		function cba()
+		{
+			document.getElementById('x').style.background="white";
+			document.getElementById('x').style.color="black";
+		}
+		function cba1()
+		{
+			document.getElementById('x1').style.background="white";
+			document.getElementById('x1').style.color="black";
+		}
+	</script>
+</head>
+<body>
+	<div><h1>COMPOUND INTEREST</h1></div>
+	<div class="b">
+		<table>
+			<tr>
+				<td>NAME</td>
+				<td>:</td>
+				<td><input type="text" id="x" onfocus="abc()" onblur="cba()" placeholder="Enter Name" name=""><span id="y"></span></td>
+			</tr>
+			<tr>
+				<td>AMOUNT</td>
+				<td>:</td> 
+				<td><input type="text" id="x1" onfocus="abc1()" onblur="cba1()" placeholder="Enter Amount" name=""><span id="y1"></span></td>
+			</tr>
+			<tr>
+				<td>INSTALMENT</td>
+				<td>:</td>
+				<td>
+					<select id="x2">
+						<option value="12">12</option>
+						<option value="24">24</option>
+						<option value="36">36</option>
+					</select><span id="y2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>
+					<input type="submit" onclick="ab()" name="">
+					<input type="reset" value="cancel" name=""><span id="y3"></span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="c">
+		<h1>COMPOUND INTEREST</h1>
+	</div>
+	<div>
+		<table border="2" cellpadding="10" cellspacing="10" width="100%">
+			<tr>
+				<td>S.NO</td>
+				<td>AMOUNT</td>
+				<td>INTEREST</td>
+				<td>REPAY</td>
+			</tr>
+			<tr>
+				<td>1.</td>
+				<td><p id="a1"></p></td>
+				<td><p id="a2"></p></td>
+				<td><p id="a3"></p></td>
+			</tr>
+			<tr>
+				<td>2.</td>
+				<td><p id="a4"></p></td>
+				<td><p id="a5"></p></td>
+				<td><p id="a6"></p></td>
+			</tr>
+			<tr>
+				<td>3.</td>
+				<td><p id="a7"></p></td>
+				<td><p id="a8"></p></td>
+				<td><p id="a9"></p></td>
+			</tr>
+			<tr>
+				<td>4.</td>
+				<td><p id="a10"></p></td>
+				<td><p id="a11"></p></td>
+				<td><p id="a12"></p></td>
+			</tr>
+			<tr>
+				<td>5.</td>
+				<td><p id="a13"></p></td>
+				<td><p id="a14"></p></td>
+				<td><p id="a15"></p></td>
+			</tr>
+			<tr>
+				<td>6.</td>
+				<td><p id="a16"></p></td>
+				<td><p id="a17"></p></td>
+				<td><p id="a18"></p></td>
+			</tr>
+			<tr>
+				<td>7.</td>
+				<td><p id="a19"></p></td>
+				<td><p id="a20"></p></td>
+				<td><p id="a21"></p></td>
+			</tr>
+			<tr>
+				<td>8.</td>
+				<td><p id="a22"></p></td>
+				<td><p id="a23"></p></td>
+				<td><p id="a24"></p></td>
+			</tr>
+			<tr>
+				<td>9.</td>
+				<td><p id="a25"></p></td>
+				<td><p id="a26"></p></td>
+				<td><p id="a27"></p></td>
+			</tr>
+			<tr>
+				<td>10.</td>
+				<td><p id="a28"></p></td>
+				<td><p id="a29"></p></td>
+				<td><p id="a30"></p></td>
+			</tr>
+		</table>
+	</div>
+	<div class="footer">
+		<a href="index.html">HOME</a>
+	</div>
+</body>
+</html>
